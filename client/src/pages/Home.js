@@ -14,7 +14,7 @@ const Home = () => {
 
     const getdata = async () => {
         // Pass page number to backend
-        const res = await fetch(`http://localhost:5000/getdata?search=${search}&page=${page}`, {
+        const res = await fetch(`https://mern-backend-api-fc8r.onrender.com/getdata`, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         });
@@ -46,7 +46,7 @@ const Home = () => {
     }
 
     const deleteuser = async (id) => {
-        const res2 = await fetch(`http://localhost:5000/deleteuser/${id}`, {
+        const res2 = await fetch(`https://mern-backend-api-fc8r.onrender.com/deleteuser`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" }
         });
@@ -64,7 +64,7 @@ const Home = () => {
 
     const exportuser = async () => {
         // Simply opening this URL triggers the download
-        window.open("http://localhost:5000/exportcsv", "_self");
+        window.open("https://mern-backend-api-fc8r.onrender.com/exportcsv", "_self");
     }
 
     return (
