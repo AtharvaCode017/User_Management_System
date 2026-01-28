@@ -31,7 +31,7 @@ const Edit = () => {
 
     // 2. Fetch Old Data to Fill the Form
     const getdata = async () => {
-        const res = await fetch(`http://localhost:5000/getuser/${id}`, {
+        const res = await fetch(`https://mern-backend-api-fc8r.onrender.com/getuser/${id}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         });
@@ -56,7 +56,7 @@ const Edit = () => {
 
         const { fname, lname, email, mobile, gender, location, status, profile } = inputdata;
 
-        const res2 = await fetch(`http://localhost:5000/updateuser/${id}`, {
+        const res2 = await fetch(`https://mern-backend-api-fc8r.onrender.com/updateuser/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
