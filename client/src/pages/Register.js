@@ -60,7 +60,7 @@ const Register = () => {
             toast.error("Location is required!")
         } else {
             // API Call
-            const res = await fetch("http://localhost:5000/register", {
+            const res = await fetch("https://mern-backend-api-fc8r.onrender.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
