@@ -14,7 +14,7 @@ const Home = () => {
 
     const getdata = async () => {
         // Pass page number to backend
-        const res = await fetch(`https://mern-backend-api-fc8r.onrender.com/getdata`, {
+        const res = await fetch(`https://mern-backend-api-fc8r.onrender.com/getdata?search=${search}&page=${page}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         });
@@ -46,7 +46,7 @@ const Home = () => {
     }
 
     const deleteuser = async (id) => {
-        const res2 = await fetch(`https://mern-backend-api-fc8r.onrender.com/deleteuser`, {
+        const res2 = await fetch(`https://mern-backend-api-fc8r.onrender.com/deleteuser/${id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" }
         });
