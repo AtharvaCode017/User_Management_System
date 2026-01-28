@@ -12,7 +12,7 @@ const Details = () => {
     const navigate = useNavigate();
 
     const getdata = async () => {
-        const res = await fetch(`http://localhost:5000/getuser/${id}`, {
+        const res = await fetch(`https://mern-backend-api-fc8r.onrender.com/getuser/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const Details = () => {
 
     // Delete Logic (Reusable here too!)
     const deleteuser = async (id) => {
-        const res2 = await fetch(`http://localhost:5000/deleteuser/${id}`, {
+        const res2 = await fetch(`https://mern-backend-api-fc8r.onrender.com/deleteuser/${id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" }
         });
